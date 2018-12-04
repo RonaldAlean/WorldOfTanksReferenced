@@ -12,13 +12,13 @@
     <br>
     </div>
 
-    <h1>i</h1>
+    <h1>Tier 1</h1>
       <?php
 	    // Remember to replace 'username' and 'password'!
 	    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
 
 	     //put your query here
-	      $query = "SELECT * FROM Tank_List WHERE Tanktier = 1";
+	      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 1 ";
 	      $stid = oci_parse($conn,$query);
 	      oci_execute($stid,OCI_DEFAULT);
 
