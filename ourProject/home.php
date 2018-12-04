@@ -10,13 +10,16 @@
     <h2>Country</h2>
     <div class="navbar">
     <a href="country/usa.php">USA</a>
-    <a href="country/ssr.php">SSR</a>
+    <a href="country/ssr.php">USSR</a>
     <a href="country/uk.php">UK</a>
     <a href="country/china.php">China</a>
     <a href="country/france.php">France</a>
     <a href="country/gremany.php">Germany</a>
     <a href="country/japan.php">Japan</a>
-    <a href="country/sweeden.php">Sweeden</a>
+    <a href="country/sweeden.php">Sweden</a>
+    <a href="Country/Italy.php">Italy</a>
+    <a href="Country/Poland.php">Poland</a>
+    <a href="Country/Czech.php">Czech</a>
     <br>
     </div>
 
@@ -25,7 +28,7 @@
     <a href="tankType/lights.php">Lights</a>
     <a href="tankType/medium.php">Mediums</a>
     <a href="tankType/heavies.php">Heavies</a>
-    <a href="tankType/ids.php">IDs</a>
+    <a href="tankType/ids.php">TDs</a>
     <a href="tankType/artillery.php">Artillery</a>
     <br>
     </div>
