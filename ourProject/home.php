@@ -16,9 +16,9 @@
     <a href="country/gremany.php">Germany</a>
     <a href="country/japan.php">Japan</a>
     <a href="country/sweeden.php">Sweden</a>
-    <a href="Country/Italy.php">Italy</a>
-    <a href="Country/Poland.php">Poland</a>
-    <a href="Country/Czech.php">Czech</a>
+    <a href="country/italy.php">Italy</a>
+    <a href="country/poland.php">Poland</a>
+    <a href="country/czech.php">Czech</a>
     <br>
     </div>
 
@@ -48,15 +48,238 @@
     </div>
 
     <br><br>
-    <h2><u><em>Tier_______________________________________________</em></u></h2>
+    <h2><u><em>Tier_1_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
 
-    <br><br>
-    <h2><u><em>Tier_______________________________________________</em></u></h2>
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 1 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
 
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_2_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 2 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_3_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 3 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_4_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 4 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_5_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 5 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_6_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 6 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_7_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 7 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_8_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 8 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_9_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 9 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
+    <h2><u><em>Tier_10_______________________________________________</em></u></h2>
+    <?php
+    // Remember to replace 'username' and 'password'!
+    $conn = oci_connect('busacker', 'Sep771994', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
+
+     //put your query here
+      $query = "SELECT Tankname, Tanktype, Country.CountryName FROM Tank_List INNER JOIN Country ON Tank_List.CountryId=Country.CountryId WHERE Tanktier = 10 ";
+      $stid = oci_parse($conn,$query);
+      oci_execute($stid,OCI_DEFAULT);
+
+      //iterate through each row
+      while ($row = oci_fetch_array($stid,OCI_ASSOC))
+      {
+       //iterate through each item in the row and echo it
+       foreach ($row as $item)
+       {
+          echo $item.' ';
+        }
+    echo '<br/>';}
+    oci_free_statement($stid);
+    oci_close($conn);
+    ?>
+    <br>
 
     <?php
-
-    $conn = oci_connect('ralean', 'Mar751998', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(Host=db2.ndsu.edu)(Port=1521)))(CONNECT_DATA=(SID=cs)))');
 
 
     ?>
