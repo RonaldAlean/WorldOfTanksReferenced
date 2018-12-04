@@ -5,7 +5,6 @@
   </head>
   <body>
     <h1>  </h1>
-    <a href="http://students.cs.ndsu.nodak.edu/~ralean/ourProject/addRecord.php">| Add Record</a>
 
     <h2>Country</h2>
     <div class="navbar">
